@@ -2,6 +2,13 @@
     import type { Imatch } from "../../db/interfaces";
 
     export let match: Imatch = {};
+    enum EvrScreen {
+        NONE = 'none',
+        RED = 'red-flag',
+        BLUE = 'blue-flag'
+
+    }
+    let vr= EvrScreen.NONE;
 </script>
 
 <div class="main">
@@ -43,13 +50,15 @@
         <div class="col-2">
             <div class="row">
                 <div class="col-5">
-                    <div class="card vr">VR</div>
+                   {#if vr == EvrScreen.RED}
+                        <div class="card vr">VR</div>
+                   {/if}
                 </div>
                 <div class="col-3">
                     <div class="circle" style="border-color: red;" />
                 </div>
                 <div class="col-4">
-                    <span style="color: red;" class="score float-right">8</span>
+                    <span style="color: red;" class="score float-right">{match.redScore}</span>
                 </div>
             </div>
         </div>
@@ -60,7 +69,7 @@
                 <img style="height: 100%;" src="{match.blueAthlete.club.flag}" alt="" />
             </div>
             <div style="height: 30%;color:white;margin-bottom: -20px">
-                <h2 style="font-size: 200%; font-weight:700">{match.blueAthlete.club.flag}</h2>
+                <h2 style="font-size: 200%; font-weight:700">{match.blueAthlete.club.shortname}</h2>
             </div>
 
             <div style="height: 25%;color:blue">
@@ -92,7 +101,9 @@
         <div class="col-2">
             <div class="row">
                 <div class="col-5">
+                    {#if vr == EvrScreen.BLUE}
                     <div class="card vr">VR</div>
+                    {/if}
                 </div>
                 <div class="col-3">
                     <div class="circle" style="border-color: blue;" />
@@ -125,8 +136,14 @@
         font-size: 5rem;
         font-weight: 800;
     }
+    .second{
+        font-size: 9rem;
+    }
+    .minute {
+        font-size: 9rem;
+    }
     .kata {
-        font-size: 2.7rem;
+        font-size: 3.2rem;
         font-weight: 400;
         line-height: 1.3cm;
     }
@@ -175,11 +192,17 @@
     }
     .red {
         height: 33.33vh;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
         background-color: rgba(255, 0, 0, 0.1);
     }
     .blue {
         height: 33.33vh;
         background-color: rgba(0, 0, 255, 0.1);
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
     }
     .timer {
         height: 33.33vh;
