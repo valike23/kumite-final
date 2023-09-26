@@ -189,7 +189,9 @@
                         <label for="">Sensu</label>
                     </div>
                     <div class="mt-3">
-                        <button class="button btn secondary">-1</button>
+                        <button   on:click={() => {
+                            handleScores(-1, "blue");
+                        }} class="button btn secondary">-1</button>
                     </div>
                     <div class="penalty-left">
                         <div>
@@ -293,7 +295,9 @@
                         <label for="">Sensu</label>
                     </div>
                     <div class="mt-3">
-                        <button class="button btn secondary">-1</button>
+                        <button  on:click={() => {
+                            handleScores(-  1, "red");
+                        }} class="button btn secondary">-1</button>
                     </div>
                     <div class="penalty">
                         <div>

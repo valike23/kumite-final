@@ -135,6 +135,7 @@
     .clock {
         font-size: 5rem;
         font-weight: 800;
+        padding-bottom: 1rem;
     }
     .second{
         font-size: 9rem;
