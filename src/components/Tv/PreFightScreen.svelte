@@ -15,14 +15,14 @@
                 </div>
                 <div class="col-9 pl-2">
                     <p>
-                        <span class="compitetor">Dona Lolita</span><br />
+                        <span class="compitetor">{match.redAthlete.firstName + " " + match.redAthlete.lastName}</span><br />
                         <span class="area">IKC Lyon</span> <br />
                         <span class="club"
                             ><img
                                 class="flag-img"
-                                src="assets/img/us.svg"
+                                src="{match.redAthlete.club.flag}"
                                 alt=""
-                            /> FRANCE</span
+                            /> {match.redAthlete.club.clubName}</span
                         >
                     </p>
                 </div>
@@ -34,14 +34,14 @@
                 </div>
                 <div class="col-9 pl-2">
                     <p>
-                        <span class="compitetor">Dona Lolita</span><br />
+                        <span class="compitetor">{match.blueAthlete.firstName + " " + match.blueAthlete.lastName}</span><br />
                         <span class="area">IKC Lyon</span> <br />
                         <span class="club"
                             ><img
                                 class="flag-img"
-                                src="assets/img/nigeria.svg"
+                                src="{match.blueAthlete.club.flag}"
                                 alt=""
-                            /> FRANCE</span
+                            /> {match.redAthlete.club.clubName}</span
                         >
                     </p>
                 </div>
