@@ -51,14 +51,17 @@
     const createMatch = async () => {
         let redName: string = document.getElementById("redName")["value"];
         let blueName: string = document.getElementById("blueName")["value"];
+        let category: string =  document.getElementById("category")["value"];
         let match: Imatch = {
             status: Estatus.INACTIVE,
+            category,
             redAthlete: {
                 firstName: redName.split(" ")[0],
                 lastName: redName.split(" ")[1],
                 club: {
                     clubName: document.getElementById("blueClub")["value"],
                     flag: document.getElementById("blueFlag")["value"],
+                    shortname: document.getElementById("redShort")["value"]
                 },
             },
             blueAthlete: {
@@ -67,6 +70,7 @@
                 club: {
                     clubName: document.getElementById("blueClub")["value"],
                     flag: document.getElementById("blueFlag")["value"],
+                    shortname: document.getElementById("blueShort")["value"]
                 },
             },
         };
@@ -78,6 +82,10 @@
         win.Metro.dialog.create({
             title: "Add next match",
             content: `<div>
+                <input id="category" type="text" data-role="input" data-prepend="category : ">
+                
+                <input id="blueShort" type="text" data-role="input" data-prepend="blue short name : ">
+                <input id="redShort" type="text" data-role="input" data-prepend="red shortname : ">
                 <input id="redName" type="text" data-role="input" data-prepend="Red Full Name: ">
                 <input id="blueName" type="text" data-role="input" data-prepend="Blue Full Name: ">
                 <input id="redClub" type="text" data-role="input" data-prepend="Red club Name: ">

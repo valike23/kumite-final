@@ -2,6 +2,7 @@
 export interface Iclub {
     clubName?: string;
     flag?: string;
+    shortname?: string;
 }
 
 export interface Iathlete {
@@ -16,7 +17,9 @@ export enum Estatus {
 }
 
 export interface Imatch {
+    category?: string;
     redAthlete?: Iathlete,
+
     blueAthlete?: Iathlete,
     redScore?: number;
     blueScore?: number;

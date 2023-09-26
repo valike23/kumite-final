@@ -8,7 +8,7 @@
         <legend>Tatami 1</legend>
 
         <div class="main-area">
-            <div class="bar">Kumite Individual female Seniors -61</div>
+            <div class="bar">{match.category}</div>
             <div class="row bottom">
                 <div class="col-3">
                     <div class="red">1</div>

@@ -11,7 +11,7 @@
                 <img style="height: 100%;" src="{match.redAthlete.club.flag}" alt="" />
             </div>
             <div style="height: 30%;color:white;margin-bottom: -20px">
-                <h2 style="font-size: 200%; font-weight:700">EGY</h2>
+                <h2 style="font-size: 200%; font-weight:700">{match.redAthlete.club.shortname}</h2>
             </div>
 
             <div style="height: 25%;color:red">
@@ -60,7 +60,7 @@
                 <img style="height: 100%;" src="{match.blueAthlete.club.flag}" alt="" />
             </div>
             <div style="height: 30%;color:white;margin-bottom: -20px">
-                <h2 style="font-size: 200%; font-weight:700">EGY</h2>
+                <h2 style="font-size: 200%; font-weight:700">{match.blueAthlete.club.flag}</h2>
             </div>
 
             <div style="height: 25%;color:blue">
@@ -116,7 +116,7 @@
                 class="milli">22</sup
             >
         </div>
-        <div class="col-4 kata"><p>FEMALE KUMITE -50KG | FINAL BOUT</p></div>
+        <div class="col-4 kata"><p>{match.category}</p></div>
     </div>
 </div>
 
