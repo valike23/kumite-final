@@ -16,7 +16,7 @@
                 <div class="col-9 pl-2">
                     <p>
                         <span class="compitetor">{match.redAthlete.firstName + " " + match.redAthlete.lastName}</span><br />
-                        <span class="area">IKC Lyon</span> <br />
+                    
                         <span class="club"
                             ><img
                                 class="flag-img"
@@ -35,7 +35,7 @@
                 <div class="col-9 pl-2">
                     <p>
                         <span class="compitetor">{match.blueAthlete.firstName + " " + match.blueAthlete.lastName}</span><br />
-                        <span class="area">IKC Lyon</span> <br />
+                    
                         <span class="club"
                             ><img
                                 class="flag-img"

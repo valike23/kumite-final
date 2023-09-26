@@ -17,9 +17,13 @@
         redScore: 0,
     };
 
+
+   
+
     const openScoreBoard = async () => {
         console.log("the score board not opening");
-        win.openWindow("/tv");
+       // win.openWindow("/tv");
+       channel.postMessage({ action: "show timer", activeMatch });
         console.log("the score board not opening2");
     };
 
@@ -27,6 +31,7 @@
         intervalId = setInterval(() => {
             convertTimerToSecs();
         }, 1000);
+
     };
 
     const convertTimerToSecs = () => {

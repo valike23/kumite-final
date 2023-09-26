@@ -28,6 +28,9 @@ import TimerScreen from "../components/Tv/TimerScreen.svelte";
             if(data.action == "show match") {match = data.activeMatch;
             currentScreen = Screen.PRE_FIGHT;
             }
+            if(data.action == "show timer") {match = data.activeMatch;
+            currentScreen = Screen.TIMER_SCREEN;
+            }
         };
 
     })
